@@ -5,6 +5,12 @@ function addToDo() {
   todoList.insertBefore(toDoItem(), addBtn);
 }
 
+function deleteToDo(event) {
+  if (!event.target.firstChild.length) {
+    todoList.removeChild(event.target.parentElement);
+  }
+}
+
 function toDoItem() {
   // <div class="todo__item">
   //   <input class="todo__item--checkbox" type="checkbox" name="todo-01">
@@ -25,6 +31,7 @@ function toDoItem() {
   pNode.setAttribute('class', 'todo__item--input');
   pNode.setAttribute('spellcheck', 'false');
   pNode.setAttribute('contenteditable', 'true');
+  pNode.setAttribute('oninput', 'deleteToDo(event)');
 
   return newNode;
 }
