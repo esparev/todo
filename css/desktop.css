@@ -82,6 +82,14 @@ body {
   color: var(--white);
   background-color: var(--blue);
 }
+.todo__item--checkbox:focus ~ .todo__item--input {
+  color: var(--white);
+  background-color: var(--blue);
+}
+.todo__item--checkbox:checked ~ .todo__item--input {
+  color: var(--crossed-gray);
+  text-decoration: line-through;
+}
 .todo__list--add-btn {
   width: fit-content;
   display: flex;
