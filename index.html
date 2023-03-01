@@ -44,46 +44,7 @@
                 Decidir agrupar elementos por tipo
               </p>
             </div>
-            <button class="todo__list--add-btn">
-              <svg
-                width="11"
-                height="11"
-                viewBox="0 0 11 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M1 5.5H5.5M10 5.5H5.5M5.5 5.5V1M5.5 5.5V10"
-                  stroke="#848484"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-              Agregar elemento
-            </button>
-          </div>
-        </section>
-        <section class="main__section">
-          <h3 class="main__section--h3">Planeación del producto</h3>
-          <div class="todo__list">
-            <div class="todo__item">
-              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
-              <p class="todo__item--input" contenteditable="true" spellcheck="false">
-                Decidir como organizar la página de hoy
-              </p>
-            </div>
-            <div class="todo__item">
-              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
-              <p class="todo__item--input" contenteditable="true" spellcheck="false">
-                Crear wireframes para la página de hoy
-              </p>
-            </div>
-            <div class="todo__item">
-              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
-              <p class="todo__item--input" contenteditable="true" spellcheck="false">
-                Decidir agrupar elementos por tipo
-              </p>
-            </div>
-            <button class="todo__list--add-btn">
+            <button class="todo__list--add-btn" onclick="addToDo()">
               <svg
                 width="11"
                 height="11"
@@ -184,5 +145,6 @@
         <a class="sidebar__page--item" href="">Google Clone</a>
       </div>
     </aside>
+    <script src="./index.js"></script>
   </body>
 </html>
