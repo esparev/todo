@@ -1,0 +1,12 @@
+body {
+  height: 100vh;
+}
+.main-content {
+  width: 100%;
+}
+.main {
+  padding: 20px;
+}
+.sidebar {
+  display: none;
+}

@@ -4,7 +4,185 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/globals.css" />
+    <link rel="stylesheet" href="./css/desktop.css" />
+    <link rel="stylesheet" media="(max-width: 934px)" href="./css/mobile.css" />
     <title>TODO</title>
   </head>
-  <body></body>
+  <body>
+    <div class="main-content">
+      <header class="header">
+        <p class="header__dir">
+          Proyectos — <span class="header__dir--section">Spotify Clone</span>
+        </p>
+        <h1 class="header--h1">Spotify Clone</h1>
+      </header>
+      <main class="main">
+        <section class="main__section">
+          <h3 class="main__section--h3">Planeación del producto</h3>
+          <div class="todo__list">
+            <div class="todo__item">
+              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
+              <p class="todo__item--input" contenteditable="true" spellcheck="false">
+                Decidir como organizar la página de hoy
+              </p>
+            </div>
+            <div class="todo__item">
+              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
+              <p class="todo__item--input" contenteditable="true" spellcheck="false">
+                Crear wireframes para la página de hoy
+              </p>
+            </div>
+            <div class="todo__item">
+              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
+              <p class="todo__item--input" contenteditable="true" spellcheck="false">
+                Decidir agrupar elementos por tipo
+              </p>
+            </div>
+            <button class="todo__list--add-btn">
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 11 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 5.5H5.5M10 5.5H5.5M5.5 5.5V1M5.5 5.5V10"
+                  stroke="#848484"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Agregar elemento
+            </button>
+          </div>
+        </section>
+        <section class="main__section">
+          <h3 class="main__section--h3">Planeación del producto</h3>
+          <div class="todo__list">
+            <div class="todo__item">
+              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
+              <p class="todo__item--input" contenteditable="true" spellcheck="false">
+                Decidir como organizar la página de hoy
+              </p>
+            </div>
+            <div class="todo__item">
+              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
+              <p class="todo__item--input" contenteditable="true" spellcheck="false">
+                Crear wireframes para la página de hoy
+              </p>
+            </div>
+            <div class="todo__item">
+              <input class="todo__item--checkbox" type="checkbox" name="todo-01" />
+              <p class="todo__item--input" contenteditable="true" spellcheck="false">
+                Decidir agrupar elementos por tipo
+              </p>
+            </div>
+            <button class="todo__list--add-btn">
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 11 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 5.5H5.5M10 5.5H5.5M5.5 5.5V1M5.5 5.5V10"
+                  stroke="#848484"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Agregar elemento
+            </button>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="options">
+          <div title="Marcar como terminado">
+            <svg
+              class="option--check"
+              viewBox="0 0 20 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2 6.99999L7.33333 12.3333L18 1.66666"
+                stroke="#7DB142"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div title="Marcar como no terminado">
+            <svg
+              class="option--uncheck"
+              width="16"
+              height="16"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9 9L2 2M9 9L16 16M9 9L16 2M9 9L2 16"
+                stroke="#E63E56"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div title="Archivar">
+            <svg
+              class="option--archive"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 7V13M10 13L13 10M10 13L7 10M3 1H17C18.1046 1 19 1.89543 19 3V17C19 18.1046 18.1046 19 17 19H3C1.89543 19 1 18.1046 1 17V3C1 1.89543 1.89543 1 3 1Z"
+                stroke="#EC6F33"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <div title="Agregar nueva sección">
+          <svg
+            class="option--add"
+            width="11"
+            height="11"
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1 5.5H5.5M10 5.5H5.5M5.5 5.5V1M5.5 5.5V10"
+              stroke="#2D8FEF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+      </footer>
+    </div>
+    <aside class="sidebar">
+      <h2 class="sidebar--h2">TODO List</h2>
+      <div class="sidebar__page">
+        <h4 class="sidebar__page--h4">Proyectos</h4>
+        <a class="sidebar__page--item" href="">Spotify Clone</a>
+        <a class="sidebar__page--item" href="">Netflix Clone</a>
+        <a class="sidebar__page--item" href="">Google Clone</a>
+      </div>
+      <div class="sidebar__page">
+        <h4 class="sidebar__page--h4">Proyectos</h4>
+        <a class="sidebar__page--item" href="">Spotify Clone</a>
+        <a class="sidebar__page--item" href="">Netflix Clone</a>
+        <a class="sidebar__page--item" href="">Google Clone</a>
+      </div>
+    </aside>
+  </body>
 </html>

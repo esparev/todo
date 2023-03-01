@@ -1,0 +1,28 @@
+:root {
+  --dark: #393939;
+  --gray: #848484;
+  --crossed-gray: #bec0c7;
+  --border-gray: #cfcfcf;
+  --hover-gray: #eef0f0;
+  --white: #ffffff;
+  --blue: #1a8cff;
+  --blue-bg: #e4f1ff;
+  --green: #7db142;
+  --green-bg: #e3f5ce;
+  --red: #e53e56;
+  --red-bg: #ffeded;
+  --orange: #ec6f33;
+  --orange-bg: #ffeedc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+}
+
+html {
+  font-size: 62.5%;
+}
