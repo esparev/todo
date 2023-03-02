@@ -79,3 +79,11 @@ function toDoItem() {
 
   return newNode;
 }
+
+function editTitle(event) {
+  const headerTitle = document.querySelector('.header__dir--section');
+  const sidebarProject = document.querySelector('.sidebar__page--item');
+  headerTitle.textContent = event.target.textContent;
+  sidebarProject.textContent = event.target.textContent;
+  document.title = event.target.textContent;
+}
