@@ -1,5 +1,47 @@
 const addBtn = document.querySelector('.todo__list--add-btn');
 const todoList = document.querySelector('.todo__list');
+const main = document.querySelector('.main');
+
+function addSection() {
+  main.appendChild(section());
+}
+
+function section() {
+  // <section class="main__section">
+  //   <h3 class="main__section--h3" contenteditable="true" spellcheck="false" data-placeholder="Titulo">Planeación del producto</h3>
+  //   <div class="todo__list">
+  //     <button class="todo__list--add-btn" onclick="addToDo()">
+  //       <img src="./assets/svg/plus.svg" />
+  //       <p>Agregar elemento</p>
+  //     </button>
+  //   </div>
+  // </section>
+
+  const newNode = document.createElement('section');
+  const h3Node = document.createElement('h3');
+  const divNode = document.createElement('div');
+  const buttonNode = document.createElement('button');
+  const imgNode = document.createElement('img');
+  const pNode = document.createElement('p');
+
+  newNode.setAttribute('class', 'main__section');
+  newNode.appendChild(h3Node);
+  h3Node.setAttribute('class', 'main__section--h3');
+  h3Node.setAttribute('contenteditable', 'true');
+  h3Node.setAttribute('spellcheck', 'false');
+  h3Node.setAttribute('data-placeholder', 'Título');
+  newNode.appendChild(divNode);
+  divNode.setAttribute('class', 'todo__list');
+  divNode.appendChild(buttonNode);
+  buttonNode.setAttribute('class', 'todo__list--add-btn');
+  buttonNode.setAttribute('onclick', 'addToDo()');
+  buttonNode.appendChild(imgNode);
+  imgNode.setAttribute('src', './assets/svg/plus.svg');
+  buttonNode.appendChild(pNode);
+  pNode.textContent = 'Agregar elemento';
+
+  return newNode;
+}
 
 function addToDo() {
   todoList.insertBefore(toDoItem(), addBtn);
