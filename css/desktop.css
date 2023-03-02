@@ -6,7 +6,7 @@ body {
 }
 
 .main-content {
-  width: 75%;
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
@@ -28,6 +28,7 @@ body {
 .header--h1 {
   font-weight: 800;
   font-size: 3.2rem;
+  outline: none;
 }
 
 .main {
@@ -78,15 +79,29 @@ body {
 .todo__item--input:hover {
   cursor: text;
 }
-.todo__item .todo__item--input:focus,
-.todo__item:focus-within {
-  color: var(--white);
-  background-color: var(--blue);
+@media (prefers-color-scheme: light) {
+  .todo__item .todo__item--input:focus,
+  .todo__item:focus-within {
+    color: var(--white);
+    background-color: var(--blue);
+  }
+  .todo__item--checkbox:focus ~ .todo__item--input {
+    color: var(--white);
+    background-color: var(--blue);
+  }
 }
-.todo__item--checkbox:focus ~ .todo__item--input {
-  color: var(--white);
-  background-color: var(--blue);
+@media (prefers-color-scheme: dark) {
+  .todo__item .todo__item--input:focus,
+  .todo__item:focus-within {
+    color: var(--dark);
+    background-color: var(--blue);
+  }
+  .todo__item--checkbox:focus ~ .todo__item--input {
+    color: var(--dark);
+    background-color: var(--blue);
+  }
 }
+
 .todo__item--checkbox:checked ~ .todo__item--input {
   color: var(--crossed-gray);
   text-decoration: line-through;
@@ -105,9 +120,23 @@ body {
   background-color: var(--white);
   cursor: pointer;
 }
-.todo__list--add-btn:hover {
-  background-color: var(--hover-gray);
+@media (prefers-color-scheme: light) {
+  .todo__list--add-btn {
+    background-color: var(--white);
+  }
+  .todo__list--add-btn:hover {
+    background-color: var(--hover-gray);
+  }
 }
+@media (prefers-color-scheme: dark) {
+  .todo__list--add-btn {
+    background-color: #181818;
+  }
+  .todo__list--add-btn:hover {
+    background-color: var(--white);
+  }
+}
+
 .todo__list--add-btn img {
   height: 11px;
   width: 11px;
@@ -152,13 +181,16 @@ footer {
 }
 
 .sidebar {
-  width: 25%;
+  width: auto;
+  min-width: 20%;
   height: auto;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   padding: 80px 32px;
   border-right: 0.5px var(--border-gray) solid;
+  resize: horizontal;
+  overflow: auto;
 }
 .sidebar--h2 {
   font-weight: 800;
