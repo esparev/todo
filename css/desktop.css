@@ -43,6 +43,7 @@ body {
   padding: 16px 0;
   border-bottom: 0.5px var(--border-gray) solid;
   font-size: 2.4rem;
+  outline: none;
 }
 .todo__list {
   width: 100%;
@@ -106,6 +107,13 @@ body {
 }
 .todo__list--add-btn:hover {
   background-color: var(--hover-gray);
+}
+.todo__list--add-btn img {
+  height: 11px;
+  width: 11px;
+}
+.todo__list--add-btn p {
+  color: var(--gray);
 }
 footer {
   width: 100%;
