@@ -26,3 +26,10 @@
 html {
   font-size: 62.5%;
 }
+
+[contenteditable='true']:empty:before {
+  content: attr(data-placeholder);
+  pointer-events: none;
+  display: block; /* For Firefox */
+  color: var(--gray);
+}
