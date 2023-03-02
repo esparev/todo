@@ -1,4 +1,3 @@
-const addBtn = document.querySelector('.todo__list--add-btn');
 const todoList = document.querySelector('.todo__list');
 const main = document.querySelector('.main');
 
@@ -34,7 +33,7 @@ function section() {
   divNode.setAttribute('class', 'todo__list');
   divNode.appendChild(buttonNode);
   buttonNode.setAttribute('class', 'todo__list--add-btn');
-  buttonNode.setAttribute('onclick', 'addToDo()');
+  buttonNode.setAttribute('onclick', 'addToDo(event)');
   buttonNode.appendChild(imgNode);
   imgNode.setAttribute('src', './assets/svg/plus.svg');
   buttonNode.appendChild(pNode);
@@ -43,13 +42,16 @@ function section() {
   return newNode;
 }
 
-function addToDo() {
-  todoList.insertBefore(toDoItem(), addBtn);
+function addToDo(event) {
+  const parentElement = event.target.parentElement.parentElement;
+  const button = event.target.parentElement;
+  parentElement.insertBefore(toDoItem(), button);
 }
 
 function deleteToDo(event) {
+  const parentElement = event.target.parentElement.parentElement;
   if (!event.target.firstChild.length) {
-    todoList.removeChild(event.target.parentElement);
+    parentElement.removeChild(event.target.parentElement);
   }
 }
 
